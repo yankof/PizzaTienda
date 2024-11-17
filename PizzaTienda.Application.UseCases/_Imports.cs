@@ -1,0 +1,13 @@
+﻿global using FluentValidation;
+global using AutoMapper;
+global using MediatR;
+global using Microsoft.Extensions.DependencyInjection;
+global using PizzaTienda.Application.Interfaces.Persistence;
+global using PizzaTienda.Transversal.Common;
+global using System.Reflection;
+global using PizzaTienda.Application.DTO;
+global using PizzaTienda.Application.Interfaces.UsesCases;
+global using PizzaTienda.Application.UseCases.Pedido;
+global using PizzaTienda.Application.UseCases.Producto;
+global using PizzaTienda.Application.UseCases.ProductoComponente;
+global using PizzaTienda.Application.Validator;
