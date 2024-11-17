@@ -102,3 +102,34 @@ GO
 
 
 # Ejemplos del uso de las apis
+# metodo api/Pedido/InsertAsync
+# modificando la fecha se puede ver la regla de los descuentos embebida en el programa
+{
+  "id": 5,
+  "idCliente": 1,
+  "nombreCliente": "juan perez",
+  "direccionCliente": "los tecos",
+  "nitCliente": "5338119",
+  "telefonoCliente": "777888555",
+  "idProducto": 1,
+  "descripcionProducto": "Pizza hawaiana carnivora",
+  "cantidadProducto": 1.00,
+  "precioProducto": 150.00,
+  "precioDelivery": 10.00,
+  "totalProducto": 160.00,
+  "estatus": "1",
+  "creadoPor": "Admin",
+  "creadoEl": "2024-11-12T05:52:39.852Z"
+}
+
+# metodo api/Producto/InsertAsync
+{
+  "id": 4,
+  "descripcion": "Pizza quesuna",
+  "abreviacion": "Quesun",
+  "estatus": "1",
+  "creadoPor": "Admin",
+  "creadoEl": "2024-11-17T21:23:17.672Z"
+}
+
+
