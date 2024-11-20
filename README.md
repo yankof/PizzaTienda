@@ -18,38 +18,6 @@ CREATE TABLE [dbo].[Producto]
 
 );
 GO
--- Create a new table called '[Componentes]' in schema '[dbo]'
--- Drop the table if it already exists
-IF OBJECT_ID('[dbo].[Componentes]', 'U') IS NOT NULL
-DROP TABLE [dbo].[Componentes]
-GO
--- Create the table in the specified schema
-CREATE TABLE [dbo].[Componentes]
-(
-    [Id] INT NOT NULL PRIMARY KEY, -- Primary Key column
-    [Descripcion] NVARCHAR(50) NOT NULL,
-    [tipo] NVARCHAR(50) NOT NULL,
-    -- Specify more columns here
-    estatus     NVARCHAR(1),
-    creadoPor   nvarchar(60),
-    creadoEl    DATETIME,
-    
-);
-GO
--- Create a new table called '[ProductoComponente]' in schema '[dbo]'
--- Drop the table if it already exists
-IF OBJECT_ID('[dbo].[ProductoComponente]', 'U') IS NOT NULL
-DROP TABLE [dbo].[ProductoComponente]
-GO
--- Create the table in the specified schema
-CREATE TABLE [dbo].[ProductoComponente]
-(
-    [Id] INT NOT NULL PRIMARY KEY, -- Primary Key column
-    idProducto int not null,
-    idComponente int not null,
-    -- Specify more columns here
-);
-GO
 -- Create a new table called '[Pedido]' in schema '[dbo]'
 -- Drop the table if it already exists
 IF OBJECT_ID('[dbo].[Pedido]', 'U') IS NOT NULL
@@ -79,10 +47,6 @@ CREATE TABLE [dbo].[Pedido]
     creadoPor varchar(60),
     creadoEl    datetime,
 );
-go
-alter table ProductoComponente add FOREIGN key (idProducto) REFERENCES Producto
-go
-alter TABLE ProductoComponente add FOREIGN KEY (idComponente) REFERENCES Componentes
 GO
 -- Create a new table called '[Promocion]' in schema '[dbo]'
 -- Drop the table if it already exists
@@ -131,5 +95,10 @@ GO
   "creadoPor": "Admin",
   "creadoEl": "2024-11-17T21:23:17.672Z"
 }
+
+Ejemplo de uso
+https://app.screencast.com/LpJoGE3HecMNs
+
+
 
 
